@@ -20,7 +20,18 @@ class myClass {
         print("result = \(result)")
     }
     
+    // Function Type Return
+    func functionReturn() -> Int {
+        return 100
+    }
     
+    // Function Type Return add argument
+    func calculateArea(base:Int, height:Int) -> Double {
+        let baseDou = Double(base)
+        let heightDou = Double(height)
+        let result1 = 0.5 * baseDou * heightDou
+        return result1
+    }
     
 } // Myclass
 
@@ -39,4 +50,9 @@ print("ค่าใหม่ที่เกิดขึ้น หลังทำ
 objectmyClass.functionVoid()
 //  การใช้ functionVoidaddArgument
 objectmyClass.functionVoidaddArgument(surname: "khaiharn")
-
+// การใช้ functionReturn
+var answerInt:Int = objectmyClass.myNumber + objectmyClass.functionReturn()
+print("answer = \(answerInt)")
+// การใช้ functionReturnargument
+var areaDou:Double = objectmyClass.calculateArea(base: 5, height: 11)
+print("areaDou = \(areaDou)")
